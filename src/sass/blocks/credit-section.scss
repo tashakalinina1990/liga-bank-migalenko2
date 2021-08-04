@@ -1,0 +1,82 @@
+.credit-section {
+    display: flex;
+    justify-content: center;
+    background-color: #2C36F2;
+}
+
+.credit-section__center-wrapper {
+    padding-top: 57px;
+    display: flex;
+    justify-content: start;
+    padding-bottom: 82px;
+    
+    
+    background: url("../img/credit-background.png") center no-repeat;
+}
+
+.credit-section__background-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%);
+}
+
+.credit-section__credit {
+    margin-left: 170px;
+}
+
+.credit-section__bank-name {
+    font-family: $bold;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 63px;
+    margin-bottom: 10px;
+
+    color: #F6F7FF;
+}
+
+.credit-section__description {
+    font-family: $default;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+
+    color: #E0E1EA;
+}
+
+.credit-section__count-credit-button {
+    background: #F6F7FF;
+    border-radius: 4px;
+    font-family: $med;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: $black;
+    border: none;
+    padding: 16px 36px 23px 36px;
+    height: 53px;
+    box-sizing: border-box;
+
+    margin-top: 33px;
+}
+
+.credit-section__credit-cards {
+    width: 398px;
+    height: 240px;
+    padding: 0;
+    margin-left: 181px;
+    margin-top: 21px;
+    position: relative;
+}
+
+.credit-section__card {
+    position: absolute;
+    top: -18px;
+    right: -23px;
+
+    &--black {
+        z-index: 2;
+        top: 40px;
+        right: 87px;
+    }
+}

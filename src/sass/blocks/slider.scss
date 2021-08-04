@@ -1,0 +1,333 @@
+.slider {
+    display: flex;
+    justify-content: center;
+    background-color: #2C36F2;
+}
+
+.slider__center-wrapper {
+    height: 400px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: start;
+    
+    
+    background: url("../img/credit-background.png") center no-repeat;
+
+    &--ads {
+        background: url("../img/slider-2-background.jpg") center no-repeat; 
+    }
+
+    &--find-us {
+        background: url("../img/slider-3-background.jpg") center no-repeat; 
+    }
+}
+
+.slider__background-wrapper {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%);
+
+    &--ads {
+        background: linear-gradient(90deg, #DFE4ED, #DFE4ED 70%, #fff 100%);
+    }
+
+    &--find-us {
+        background: linear-gradient(90deg, #E6F1FE, #E6F1FE 30%, #fff 100%); 
+    }
+}
+
+.slider__credit {
+    margin-left: 178px;
+    margin-top: 102px;
+}
+
+.slider__title {
+    display: block
+}
+
+.slider__bank-name {
+    font-family: $bold;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 63px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    min-width: 70px;
+
+    color: #F6F7FF;
+
+    &--black {
+        color: #1F1E25;
+    }
+}
+
+.slider__description {
+    font-family: $default;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+
+    color: #E0E1EA;
+
+    &--black {
+        color: #2B3C4F;
+    }
+}
+
+.slider__button {
+    display: block;
+    background: #F6F7FF;
+    border-radius: 4px;
+    font-family: $med;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: $black;
+    border: none;
+    text-align: center;
+    padding-top: 16px;
+    width: 234px;
+    height: 53px;
+    box-sizing: border-box;
+
+    margin-top: 33px;
+
+    &--blue {
+        color: #F6F7FF;
+        background: #2C36F2;
+    }
+}
+
+.slider__credit-cards {
+    width: 398px;
+    height: 240px;
+    padding: 0;
+    margin-left: 181px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.slider__card {
+    position: absolute;
+    width: 289px;
+    height: 182px;
+    border-radius: 10px;
+
+    &--white {
+        top: -18px;
+        right: 0px;
+        background: url("../img/white-card.png") center no-repeat;
+    }
+
+    &--black {
+        z-index: 2;
+        top: 40px;
+        right: 110px;
+        background: url("../img/black-card.png") center no-repeat;
+    }
+}
+
+.slick-dots {
+    bottom: 45px !important;
+    left: 10px;
+    width: 40px;
+    height: 8px;
+    display: flex;
+    justify-content: space-between;
+
+    & li {
+        width: 8px !important;
+        height: 8px !important;
+        background: #2028B6;
+        border-radius: 50%;
+
+        & button::before {
+            display: none;
+        }
+    }
+}
+
+.slick-dots .slick-active {
+    background: #F6F7FF;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .slider__credit {
+        margin-left: 17px;
+        margin-top: 64px;
+    }
+
+    .slider__credit-cards {
+        margin-top: 65px;
+        margin-left: 62px;
+        width: 311px;
+    }
+
+    .slider__bank-name {
+        font-size: 46px;
+        line-height: 54px;   
+    }
+
+    .slider__description{
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .slider__background-wrapper {
+        background-size: cover;
+        background: url("../img/slider-1-background-tablet.png") center no-repeat; 
+
+        &--ads {
+            background: linear-gradient(90deg, #DFE4ED, #DFE4ED 30%, #fff 100%);
+        }
+    
+        &--find-us {
+            background: linear-gradient(90deg, #E6F1FE, #E6F1FE 30%, #fff 100%); 
+        }
+    }
+    
+    .slider__center-wrapper { 
+        justify-content: center;
+        height: 300px;
+        background-size: cover;
+        background: url("../img/slider-1-background-tablet.png") center no-repeat;
+        
+        &--ads {
+            justify-content: start;
+            padding-left: 70px;
+            background: url("../img/slider-2-background-tablet.jpg") center no-repeat; 
+        }
+    
+        &--find-us {
+            justify-content: start;
+            padding-left: 70px;
+            background: url("../img/slider-3-background-tablet.jpg") center no-repeat; 
+        }
+    }
+
+    .slider__button {
+        padding-top: 14px;
+        width: 206px;
+        height: 48px;
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 28px;
+    }
+
+    .slider__card {
+        width: 226px;
+        height: 142px;
+
+        &--white {
+            top: -8px;
+            right: 0px;
+            background: url("../img/white-card-tablet.png") center no-repeat;
+        }
+    
+        &--black {
+            z-index: 2;
+            top: 36px;
+            right: 84px;
+            background: url("../img/black-card-tablet.png") center no-repeat;
+        }
+    }
+
+    .slick-dots {
+        bottom: 20px !important;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .slider__credit {
+        margin-top: 40px;
+        margin-left: 15px;
+        margin-right: 25px;
+    }
+
+    .slider__credit-cards {
+        margin-top: 48px;
+        margin-left: auto;
+        width: 226px;
+        height: 133px;
+    }
+
+    .slider__card {
+        width: 226px;
+        height: 133px;
+
+        &--white {
+            display: none;
+        }
+    
+        &--black {
+            z-index: 2;
+            top: 0px;
+            left: 0px;
+            background: url("../img/black-card-tablet.png") center no-repeat;
+        }
+    }
+
+    .slider__bank-name {
+        font-size: 38px;
+        line-height: 45px; 
+    }
+
+    .slider__description{
+        width: 200px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    
+    .slider__center-wrapper { 
+        
+        background-size: cover;
+        height: 226px;
+
+        background: #2C36F2;
+        
+        &--ads {
+            background: url("../img/slider-2-background-mobile.jpg") right no-repeat; 
+        }
+    
+        &--find-us {
+            background: url("../img/slider-3-background-mobile.jpg") right no-repeat; 
+        }
+    }
+
+    .slider__button {
+        padding-top: 12px;
+        width: 188px;
+        height: 43px;
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 22px;
+    }
+
+    .slider__description--ads-mobile {
+        width: 140px;
+    }
+
+    .slick-dots {
+        bottom: 14px !important;
+        left: 3px;
+        width: 30px;
+        height: 6px;
+        display: flex;
+        justify-content: space-between;
+    
+        & li {
+            width: 6px !important;
+            height: 6px !important;
+            background: #2028B6;
+            border-radius: 50%;
+    
+            & button::before {
+                display: none;
+            }
+        }
+    }
+}

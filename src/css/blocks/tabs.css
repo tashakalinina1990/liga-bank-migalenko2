@@ -1,0 +1,15 @@
+.tabs {
+  display: flex;
+  justify-content: center; }
+
+.tabs__list {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0; }
+
+.tabs__list-item {
+  width: 263px;
+  height: 93px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }

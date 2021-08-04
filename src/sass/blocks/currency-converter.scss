@@ -1,0 +1,74 @@
+.currency-converter {
+    display: flex;
+    justify-content: center;
+}
+
+.currency-converter__center-wrapper {
+    display: flex;
+}
+
+.currency-converter__title {
+    font-family: $bold;
+    font-weight: bold;
+    font-size: 41px;
+    line-height: 57px;
+    color: #1F1E25;
+    margin-bottom: 48px;
+    margin-top: 47px;
+}
+
+.currency-converter__converter {
+    display: flex;
+    margin-bottom: 85px;
+}
+
+.currency-converter__submit-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.react-date-picker__wrapper {
+    position: relative;
+    border: 1px solid $black;
+    box-sizing: border-box;
+    width: 390px;
+    height: 60px;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 14px 0px 15px 117px;
+    outline: none;
+
+    font-family: $default;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 34px;
+
+    color: #000;
+    
+    &::-webkit-calendar-picker-indicator {
+        display: none;
+        -webkit-appearance: none;
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 39px;
+        height: 42px;
+        background: url("../img/calendar.svg") center no-repeat;
+        right: 20px;
+        top: 7px;
+    }
+}
+
+.react-date-picker__clear-button,
+.react-date-picker__calendar-button {
+    display: none;
+}
+
+.currency-converter__submit-button {
+    @include blue-button;
+    height: 60px;
+    width: 382px;
+}

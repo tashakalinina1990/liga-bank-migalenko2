@@ -1,0 +1,80 @@
+.converter-input:first-of-type {
+    margin-right: 120px;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 50px;
+        height: 34px;
+        background: url("../img/convert-arrows.svg") center no-repeat;
+        top: 63px;
+        right: -88px;
+    }
+}
+
+.converter-input__label {
+    font-family: $med;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 31px;
+    color: $black;
+    cursor: pointer;
+}
+
+.converter-input__inputs {
+    margin-top: 22px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.converter-input__amount {
+    width: 390px;
+    padding: 13px 0 13px 10px;
+    border: 1px solid $black;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-align: center;
+
+    font-family: $med;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    color: #000000;
+    margin-right: 15px;
+}
+
+    
+.converter-input__select-wrapper{
+
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 8px;
+        background: url('../img/dropdown-arrow.svg') center no-repeat;
+        top: 26px;
+        right: 17px;
+    }
+}
+
+.converter-input__type {
+    font-family: $default;
+    font-size: 30px;
+    line-height: 42px;
+    color: #000000;
+    border: 1px solid #1F1E25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 9px 41px 8px 18px;
+    outline: none;
+    background-color: #fff;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

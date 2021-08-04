@@ -1,0 +1,1778 @@
+html {
+  width: 100%;
+  overflow-x: hidden; }
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px; }
+
+main {
+  flex-grow: 1; }
+
+footer {
+  flex-shrink: 0;
+  background: black; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.hidden-overflow {
+  overflow: hidden; }
+
+.center-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1170px;
+  box-sizing: border-box; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .center-wrapper {
+    max-width: 1023px; } }
+
+@media (max-width: 767px) {
+  .center-wrapper {
+    max-width: 767px; } }
+
+@font-face {
+  font-family: "Work Sans bold";
+  src: url("../fonts/worksans-bold.woff2") format("woff2"), url("../fonts/worksans-bold.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: "Roboto bold";
+  src: url("../fonts/roboto-bold.woff2") format("woff2"), url("../fonts/roboto-bold.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: "Roboto light";
+  src: url("../fonts/roboto-light.woff2") format("woff2"), url("../fonts/roboto-light.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: "Roboto medium";
+  src: url("../fonts/roboto-medium.woff2") format("woff2"), url("../fonts/roboto-medium.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: "Roboto regular";
+  src: url("../fonts/roboto-regular.woff2") format("woff2"), url("../fonts/roboto-regular.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: "Roboto thin";
+  src: url("../fonts/roboto-thin.woff2") format("woff2"), url("../fonts/roboto-thin.woff") format("woff");
+  font-display: swap; }
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 21px 34px;
+  background-color: #F6F7FF; }
+
+.header__log-in-mobile-icon {
+  display: none; }
+
+.header__center-wrapper {
+  align-items: center;
+  justify-content: space-between; }
+
+.header__menu--mobile-hidden {
+  display: block; }
+
+.header__menu {
+  width: 78%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.header__mobile-menu {
+  display: none; }
+
+.header__logo {
+  margin-top: 5px; }
+
+.header__nav-items {
+  display: flex;
+  justify-content: start;
+  width: 474px;
+  padding-left: 0; }
+
+.header__nav-link {
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1F1E25; }
+
+.header__nav-item:not(:first-of-type) {
+  margin-left: 25px; }
+
+.header__nav-item--active > a {
+  color: #2C36F2; }
+
+.header__log-in {
+  cursor: pointer;
+  margin-left: 40px;
+  color: #1F1E25;
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px; }
+  .header__log-in::before {
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 22px;
+    content: "";
+    margin-left: -30px;
+    background: url("../img/log-in.svg") center no-repeat; }
+
+.header__mobile-menu-cross {
+  display: none; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    padding: 13px 20px 9px 40px; }
+  .header__log-in {
+    margin-top: -10px;
+    font-size: 0; }
+  .header__nav-link {
+    font-size: 14px;
+    line-height: 16px; }
+  .header__menu {
+    width: 70.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .header__nav-items {
+    margin-top: 13px;
+    width: 440px; }
+  .header__nav-item:not(:first-of-type) {
+    margin-left: 20px; } }
+
+@media (max-width: 767px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    padding: 16px 20px 10px 10px;
+    background-color: #F6F7FF; }
+  .header__log-in-mobile-icon {
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 22px;
+    content: "";
+    margin-left: auto;
+    background: url("../img/log-in.svg") center no-repeat; }
+  .header__center-wrapper {
+    justify-content: flex-start; }
+  .header__mobile-menu {
+    display: block; }
+  .header__menu {
+    position: absolute;
+    width: 100vw;
+    padding-bottom: 30px;
+    top: 40px;
+    left: -20px;
+    padding-left: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    z-index: 10; }
+  .header__nav-items {
+    flex-direction: column;
+    width: 290px; }
+  .header__logo {
+    margin-top: 0px;
+    margin-left: 14px; }
+  .header__navigation {
+    width: 290px; }
+  .header__nav-item {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #C1C2CA; }
+    .header__nav-item:not(:first-of-type) {
+      margin-top: 25px;
+      margin-left: 0px; }
+    .header__nav-item:first-of-type {
+      padding-top: 20px;
+      border-top: 1px solid #C1C2CA; }
+  .header__log-in {
+    width: 290px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #C1C2CA;
+    margin-left: 0;
+    padding-left: 30px;
+    box-sizing: border-box; }
+    .header__log-in::before {
+      display: inline-block;
+      position: absolute;
+      width: 20px;
+      height: 22px;
+      content: "";
+      margin-left: -30px;
+      background: url("../img/log-in.svg") center no-repeat; }
+  .header__menu--mobile-hidden {
+    display: none; }
+  .header__mobile-menu-cross {
+    display: block;
+    margin-left: auto; } }
+
+.logo {
+  display: flex;
+  position: relative; }
+
+.logo__image {
+  margin-top: -16px;
+  margin-left: -1px;
+  margin-right: 9px; }
+
+.logo__name {
+  font-family: "Work Sans bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  margin-top: -4px; }
+  .logo__name--popup {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px; }
+
+.logo__popup-bold {
+  width: 150px; }
+
+.logo__popup-small {
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logo__name {
+    font-size: 18px;
+    line-height: 21px; } }
+
+@media (max-width: 767px) {
+  .logo__name {
+    font-size: 16px;
+    line-height: 19px; }
+    .logo__name--popup {
+      margin-top: -10px; }
+  .logo__image {
+    width: 18px;
+    height: 17px;
+    margin-top: -5px;
+    margin-left: -1px;
+    margin-right: 9px; }
+    .logo__image--popup {
+      width: 30px;
+      height: 27px; } }
+
+.navigation__nav-items {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 520px;
+  padding-left: 0;
+  justify-content: space-between;
+  padding-right: 20px; }
+
+.navigation__nav-item {
+  margin-bottom: 10px;
+  margin-right: 20px; }
+
+.navigation__nav-link {
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #48494D; }
+  .navigation__nav-link:hover {
+    color: #D12136; }
+
+.slider {
+  display: flex;
+  justify-content: center;
+  background-color: #2C36F2; }
+
+.slider__center-wrapper {
+  height: 400px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: start;
+  background: url("../img/credit-background.png") center no-repeat; }
+  .slider__center-wrapper--ads {
+    background: url("../img/slider-2-background.jpg") center no-repeat; }
+  .slider__center-wrapper--find-us {
+    background: url("../img/slider-3-background.jpg") center no-repeat; }
+
+.slider__background-wrapper {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%); }
+  .slider__background-wrapper--ads {
+    background: linear-gradient(90deg, #DFE4ED, #DFE4ED 70%, #fff 100%); }
+  .slider__background-wrapper--find-us {
+    background: linear-gradient(90deg, #E6F1FE, #E6F1FE 30%, #fff 100%); }
+
+.slider__credit {
+  margin-left: 178px;
+  margin-top: 102px; }
+
+.slider__title {
+  display: block; }
+
+.slider__bank-name {
+  font-family: "Roboto bold", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 63px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  min-width: 70px;
+  color: #F6F7FF; }
+  .slider__bank-name--black {
+    color: #1F1E25; }
+
+.slider__description {
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  color: #E0E1EA; }
+  .slider__description--black {
+    color: #2B3C4F; }
+
+.slider__button {
+  display: block;
+  background: #F6F7FF;
+  border-radius: 4px;
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #1F1E25;
+  border: none;
+  text-align: center;
+  padding-top: 16px;
+  width: 234px;
+  height: 53px;
+  box-sizing: border-box;
+  margin-top: 33px; }
+  .slider__button--blue {
+    color: #F6F7FF;
+    background: #2C36F2; }
+
+.slider__credit-cards {
+  width: 398px;
+  height: 240px;
+  padding: 0;
+  margin-left: 181px;
+  margin-top: 100px;
+  position: relative; }
+
+.slider__card {
+  position: absolute;
+  width: 289px;
+  height: 182px;
+  border-radius: 10px; }
+  .slider__card--white {
+    top: -18px;
+    right: 0px;
+    background: url("../img/white-card.png") center no-repeat; }
+  .slider__card--black {
+    z-index: 2;
+    top: 40px;
+    right: 110px;
+    background: url("../img/black-card.png") center no-repeat; }
+
+.slick-dots {
+  bottom: 45px !important;
+  left: 10px;
+  width: 40px;
+  height: 8px;
+  display: flex;
+  justify-content: space-between; }
+  .slick-dots li {
+    width: 8px !important;
+    height: 8px !important;
+    background: #2028B6;
+    border-radius: 50%; }
+    .slick-dots li button::before {
+      display: none; }
+
+.slick-dots .slick-active {
+  background: #F6F7FF; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .slider__credit {
+    margin-left: 17px;
+    margin-top: 64px; }
+  .slider__credit-cards {
+    margin-top: 65px;
+    margin-left: 62px;
+    width: 311px; }
+  .slider__bank-name {
+    font-size: 46px;
+    line-height: 54px; }
+  .slider__description {
+    font-size: 18px;
+    line-height: 21px; }
+  .slider__background-wrapper {
+    background-size: cover;
+    background: url("../img/slider-1-background-tablet.png") center no-repeat; }
+    .slider__background-wrapper--ads {
+      background: linear-gradient(90deg, #DFE4ED, #DFE4ED 30%, #fff 100%); }
+    .slider__background-wrapper--find-us {
+      background: linear-gradient(90deg, #E6F1FE, #E6F1FE 30%, #fff 100%); }
+  .slider__center-wrapper {
+    justify-content: center;
+    height: 300px;
+    background-size: cover;
+    background: url("../img/slider-1-background-tablet.png") center no-repeat; }
+    .slider__center-wrapper--ads {
+      justify-content: start;
+      padding-left: 70px;
+      background: url("../img/slider-2-background-tablet.jpg") center no-repeat; }
+    .slider__center-wrapper--find-us {
+      justify-content: start;
+      padding-left: 70px;
+      background: url("../img/slider-3-background-tablet.jpg") center no-repeat; }
+  .slider__button {
+    padding-top: 14px;
+    width: 206px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 28px; }
+  .slider__card {
+    width: 226px;
+    height: 142px; }
+    .slider__card--white {
+      top: -8px;
+      right: 0px;
+      background: url("../img/white-card-tablet.png") center no-repeat; }
+    .slider__card--black {
+      z-index: 2;
+      top: 36px;
+      right: 84px;
+      background: url("../img/black-card-tablet.png") center no-repeat; }
+  .slick-dots {
+    bottom: 20px !important; } }
+
+@media (max-width: 767px) {
+  .slider__credit {
+    margin-top: 40px;
+    margin-left: 15px;
+    margin-right: 25px; }
+  .slider__credit-cards {
+    margin-top: 48px;
+    margin-left: auto;
+    width: 226px;
+    height: 133px; }
+  .slider__card {
+    width: 226px;
+    height: 133px; }
+    .slider__card--white {
+      display: none; }
+    .slider__card--black {
+      z-index: 2;
+      top: 0px;
+      left: 0px;
+      background: url("../img/black-card-tablet.png") center no-repeat; }
+  .slider__bank-name {
+    font-size: 38px;
+    line-height: 45px; }
+  .slider__description {
+    width: 200px;
+    font-size: 16px;
+    line-height: 19px; }
+  .slider__center-wrapper {
+    background-size: cover;
+    height: 226px;
+    background: #2C36F2; }
+    .slider__center-wrapper--ads {
+      background: url("../img/slider-2-background-mobile.jpg") right no-repeat; }
+    .slider__center-wrapper--find-us {
+      background: url("../img/slider-3-background-mobile.jpg") right no-repeat; }
+  .slider__button {
+    padding-top: 12px;
+    width: 188px;
+    height: 43px;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 22px; }
+  .slider__description--ads-mobile {
+    width: 140px; }
+  .slick-dots {
+    bottom: 14px !important;
+    left: 3px;
+    width: 30px;
+    height: 6px;
+    display: flex;
+    justify-content: space-between; }
+    .slick-dots li {
+      width: 6px !important;
+      height: 6px !important;
+      background: #2028B6;
+      border-radius: 50%; }
+      .slick-dots li button::before {
+        display: none; } }
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 44px;
+  padding-bottom: 20px; }
+
+.tabs__tab {
+  overflow: hidden;
+  padding-left: 58px;
+  padding-top: 37px;
+  padding-bottom: 40px; }
+  .tabs__tab--deposite {
+    background: url("../img/piggybank.jpg") top 53px right 135px no-repeat; }
+    .tabs__tab--deposite .tabs__title {
+      width: 371px; }
+    .tabs__tab--deposite span {
+      width: 371px; }
+  .tabs__tab--credits {
+    background: url("../img/credit.jpg") top 53px right 135px no-repeat; }
+    .tabs__tab--credits .tabs__title {
+      width: 286px; }
+  .tabs__tab--insurance {
+    background: url("../img/safety.jpg") top 53px right 135px no-repeat; }
+    .tabs__tab--insurance .tabs__title {
+      width: 337px; }
+  .tabs__tab--online-services {
+    background: url("../img/online-services.jpg") top 53px right 135px no-repeat; }
+    .tabs__tab--online-services .tabs__title {
+      width: 406px; }
+    .tabs__tab--online-services span {
+      width: 355px; }
+
+.tabs__center-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px; }
+
+.tabs__list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 0; }
+
+.tabs__list-item {
+  width: 263px;
+  height: 93px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+  .tabs__list-item--active img {
+    opacity: 1; }
+
+.tabs__list-item-img {
+  opacity: 0.75; }
+
+.tabs__list-item-name {
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #4C4B51;
+  margin-left: 10px; }
+
+@media (max-width: 1023px) {
+  .tabs__list {
+    display: none; } }
+
+.tabs__title {
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 31px;
+  color: #1F1E25;
+  margin-top: 0; }
+
+.tabs__info-list {
+  margin-top: 30px;
+  margin-bottom: 35px;
+  padding-left: 0; }
+
+.tabs__info-list-item {
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  color: #1F1E25;
+  margin-bottom: 15px; }
+  .tabs__info-list-item::before {
+    content: "";
+    width: 21px;
+    height: 20px;
+    background: url("../img/tick.svg") left no-repeat;
+    margin-bottom: auto; }
+
+.tabs__learn-more {
+  box-sizing: border-box;
+  width: 198px;
+  height: 51px;
+  background: #2C36F2;
+  border-radius: 4px;
+  padding: 20px auto;
+  text-align: center;
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: #F6F7FF;
+  outline: none;
+  border: none; }
+
+.tabs__info {
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  color: #1F1E25; }
+
+.tabs__learn-more-link {
+  color: #1F1E25;
+  font-weight: bold;
+  border-bottom: 1px solid #1F1E25; }
+
+.tabs .slick-dots {
+  bottom: -30px !important; }
+
+.tabs .slick-dots li {
+  background: #2028B6; }
+
+.tabs .slick-dots .slick-active {
+  background: #E0E0E0; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tabs__title {
+    font-size: 18px;
+    line-height: 25px; }
+  .tabs__info-list-item {
+    font-size: 16px;
+    line-height: 21px; }
+  .tabs__info-list {
+    margin-top: 25px;
+    margin-bottom: 30px; }
+  .tabs__tab {
+    padding-left: 25px;
+    padding-top: 9px; }
+    .tabs__tab--deposite {
+      background: url("../img/piggybank-tablet.jpg") bottom 0px right 30px no-repeat; }
+      .tabs__tab--deposite .tabs__title {
+        width: 304px; }
+      .tabs__tab--deposite span {
+        width: 330px; }
+    .tabs__tab--credits {
+      background: url("../img/credits-tablet.jpg") bottom 0px right 0px no-repeat; }
+      .tabs__tab--credits .tabs__title {
+        width: 234px; }
+    .tabs__tab--insurance {
+      background: url("../img/safety-tablet.jpg") bottom 0px right 0px no-repeat; }
+      .tabs__tab--insurance .tabs__title {
+        width: 276px; }
+    .tabs__tab--online-services {
+      background: url("../img/phone-icon-tablet.jpg") bottom 0px right 0px no-repeat; }
+      .tabs__tab--online-services .tabs__title {
+        width: 333px; }
+      .tabs__tab--online-services span {
+        width: 296px; }
+  .tabs__info {
+    font-size: 16px;
+    line-height: 22px; }
+  .tabs .slick-dots {
+    margin-left: -10px; } }
+
+@media (max-width: 767px) {
+  .tabs .slick-dots {
+    bottom: -50px !important; }
+  .tabs__title {
+    font-size: 16px;
+    line-height: 22px; }
+  .tabs__info-list-item {
+    font-size: 14px;
+    line-height: 18px; }
+  .tabs__info-list {
+    margin-top: 30px;
+    margin-bottom: 30px; }
+  .tabs__center-wrapper {
+    padding-left: 15px; }
+  .tabs__tab {
+    padding-left: 0;
+    padding-top: 10px;
+    min-width: 300px; }
+    .tabs__tab--deposite {
+      background: url("../img/piggybank-mobile.jpg") top 38px right 0px no-repeat; }
+      .tabs__tab--deposite .tabs__title {
+        width: 270px; }
+      .tabs__tab--deposite span {
+        width: 212px; }
+    .tabs__tab--credits {
+      background: url("../img/credits-mobile.jpg") top 38px right 0px no-repeat; }
+      .tabs__tab--credits .tabs__title {
+        width: 208px; }
+    .tabs__tab--insurance {
+      background: url("../img/safety-mobile.jpg") top 38px right 0px no-repeat; }
+      .tabs__tab--insurance .tabs__title {
+        width: 246px; }
+    .tabs__tab--online-services {
+      background: url("../img/phone-icon-mobile.jpg") top 38px right 0px no-repeat; }
+      .tabs__tab--online-services .tabs__title {
+        width: 223px; }
+      .tabs__tab--online-services span {
+        width: 194px; }
+  .tabs__info-list {
+    margin-top: 22px; }
+  .tabs__info-list-item {
+    margin-bottom: 12px; }
+    .tabs__info-list-item::before {
+      margin-top: 4px;
+      margin-right: 5px;
+      content: "";
+      width: 10px;
+      height: 8px;
+      background: url("../img/tick-mobile.svg") center no-repeat; }
+  .tabs__info {
+    font-size: 14px;
+    line-height: 20px; }
+  .tabs__learn-more {
+    margin-top: -2px;
+    width: 290px;
+    height: 43px;
+    font-size: 14px;
+    line-height: 16px; }
+  .tabs .slick-dots {
+    height: 6px;
+    bottom: -35px !important;
+    display: flex;
+    left: -10px; }
+    .tabs .slick-dots li {
+      width: 6px !important;
+      height: 6px !important;
+      background: #2028B6;
+      border-radius: 50%;
+      margin-right: 6px; } }
+
+.credit-calc {
+  display: flex;
+  justify-content: center; }
+
+.credit-calc__center-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8px;
+  padding-top: 44px; }
+
+.calc-credit__decline-block-title {
+  font-family: "Roboto medium", "Arial", sans-serif;
+  width: 350px;
+  font-size: 22px;
+  line-height: 31px;
+  color: #1F1E25; }
+
+.calc-credit__decline-block-description {
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  width: 253px;
+  color: #394959; }
+
+.credit-calc__main-title {
+  font-family: "Roboto bold", "Arial", sans-serif;
+  font-size: 41px;
+  line-height: 57px;
+  margin-bottom: 50px;
+  color: #1F1E25; }
+
+.credit-calc__title {
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 31px;
+  color: #1F1E25;
+  margin-bottom: 19px; }
+
+.credit-calc__create-request-block {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+  .credit-calc__create-request-block--open {
+    height: 750px; }
+
+.credit-calc__params-section:not(:first-of-type) {
+  margin-bottom: 20px; }
+
+.credit-calc__aim {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 17px; }
+
+.credit-calc__aim-select {
+  position: relative;
+  width: 600px;
+  height: 60px;
+  background: #FFFFFF;
+  border: 1px solid #1F1E25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 0; }
+  .credit-calc__aim-select[data-state="active"] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+    .credit-calc__aim-select[data-state="active"] .credit-calc__aim-select__title::before {
+      transform: translate(-3px, -50%) rotate(-45deg); }
+    .credit-calc__aim-select[data-state="active"] .credit-calc__aim-select__title::after {
+      transform: translate(3px, -50%) rotate(45deg); }
+    .credit-calc__aim-select[data-state="active"] .credit-calc__aim-select__content {
+      opacity: 1; }
+    .credit-calc__aim-select[data-state="active"] .credit-calc__aim-select__label + .credit-calc__aim-select__input + .credit-calc__aim-select__label {
+      height: 60px; }
+
+.credit-calc__aim-select__title {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 24px;
+  width: 600px;
+  height: 60px;
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1F1E25;
+  cursor: pointer; }
+  .credit-calc__aim-select__title::before, .credit-calc__aim-select__title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    display: block;
+    width: 10px;
+    height: 2px;
+    transition: all 0.3s ease-out;
+    background-color: #333333;
+    transform: translate(-3px, -50%) rotate(45deg); }
+  .credit-calc__aim-select__title::after {
+    transform: translate(3px, -50%) rotate(-45deg); }
+  .credit-calc__aim-select__title:hover {
+    border-color: #D8093A; }
+    .credit-calc__aim-select__title:hover::before, .credit-calc__aim-select__title:hover::after {
+      background-color: #D8093A; }
+
+.credit-calc__aim-select__content {
+  position: absolute;
+  top: 58px;
+  left: -1px;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 120px;
+  background: #FFFFFF;
+  border: 1px solid #1F1E25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  opacity: 0;
+  z-index: 8; }
+
+.credit-calc__aim-select__input {
+  display: none; }
+
+.credit-calc__aim-select__label {
+  display: flex;
+  align-items: center;
+  width: 598px;
+  box-sizing: border-box;
+  height: 60px;
+  cursor: pointer;
+  padding-left: 24px;
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1F1E25;
+  overflow: hidden; }
+  .credit-calc__aim-select__label + input + .credit-calc__aim-select__label {
+    border-top: 0 solid #C7CCD160; }
+  .credit-calc__aim-select__label:hover {
+    background-color: #D8093A !important;
+    color: #ffffff; }
+
+.credit-calc__params {
+  display: flex;
+  flex-direction: column;
+  width: 600px; }
+
+.credit-calc__params-label {
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #394959; }
+
+.credit-calc__credit-input-block-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 23px;
+  border: 1px solid #1F1E25;
+  border-radius: 4px;
+  margin-top: 8px; }
+  .credit-calc__credit-input-block-wrapper--incorrect {
+    border-color: red; }
+
+.credit-calc__credit-input-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.credit-calc__credit-amount-change-button {
+  width: 16px;
+  height: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer; }
+  .credit-calc__credit-amount-change-button--decrease {
+    background: url("../img/decrease.svg") center no-repeat;
+    margin-right: auto; }
+  .credit-calc__credit-amount-change-button--increase {
+    background: url("../img/increase.svg") center no-repeat;
+    margin-left: auto; }
+
+.credit-calc__params-custom-input {
+  cursor: pointer;
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #1F1E25;
+  flex-grow: 2;
+  border: none;
+  outline: none;
+  text-align: center; }
+
+.credit-calc__credit-input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  color: #1F1E25;
+  flex-grow: 2;
+  border: none;
+  outline: none;
+  text-align: center; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none; }
+
+.credit-calc__credit-amount-info {
+  display: inline-block;
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #707C87;
+  margin-top: 5px;
+  margin-bottom: 20px; }
+
+.credit-calc__range {
+  width: 100%;
+  margin-top: 10px; }
+
+.credit-calc__range-input {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1px;
+  background: #C1C2CA;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s; }
+
+.credit-calc__range-input:hover {
+  opacity: 1; }
+
+.credit-calc__range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2C36F2;
+  cursor: pointer; }
+
+.credit-calc__range-input::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2C36F2;
+  cursor: pointer; }
+
+.credit-calc__min-max-range {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px; }
+
+.credit-calc__range-amount {
+  font-family: "Roboto regular", "Arial", sans-serif;
+  line-height: 20px;
+  color: #707C87; }
+
+.credit-calc__mother-capital-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0; }
+
+.credit-calc__mother-capital-input-label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1F1E25;
+  cursor: pointer; }
+
+.credit-calc__mother-capital-input-label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 4px;
+  margin-right: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  cursor: pointer; }
+
+.credit-calc__mother-capital-checkbox:checked + label::before {
+  border-color: #2C36F2;
+  background-color: #2C36F2;
+  background-image: url("../img/checkbox-active.svg"); }
+
+.credit-calc__offer {
+  margin-top: 41px;
+  margin-left: 77px; }
+
+.credit-calc__offer-info {
+  margin-top: 24px;
+  width: 383px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 8px; }
+
+.credit-calc__offer-info-item {
+  margin-bottom: 24px; }
+  .credit-calc__offer-info-item:nth-of-type(2n) {
+    width: 156px; }
+
+.credit-calc__offer-amount-block {
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 31px;
+  color: #1F1E25; }
+
+.credit-calc__offer-info-item-description {
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #394959;
+  margin-top: 5px; }
+
+.credit-calc__open-request-block-button {
+  width: 382px;
+  height: 51px;
+  box-sizing: border-box;
+  text-align: center;
+  background: #2C36F2;
+  border-radius: 4px;
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #F6F7FF;
+  border: none;
+  outline: none;
+  cursor: pointer; }
+
+.credit-calc__request-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 37px;
+  padding-left: 7px; }
+
+.credit-calc__request {
+  width: 630px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.credit-calc__request-info-list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: -9px;
+  margin-bottom: 30px; }
+
+.credit-calc__request-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #C4C4C4; }
+
+.credit-calc__request-info-type {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #394959; }
+
+.credit-calc__request-info-value {
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 31px;
+  color: #1F1E25; }
+
+.credit-calc__request-inputs-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px; }
+
+.credit-calc__name-input-wrapper {
+  margin-bottom: 30px; }
+
+.credit-calc__request-input {
+  width: 300px;
+  height: 60px;
+  box-sizing: border-box;
+  padding-left: 24px;
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.03em;
+  color: #707C87;
+  border: 1px solid #0A1E32;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none; }
+  .credit-calc__request-input--name {
+    width: 100%; }
+
+.credit-calc__inputs-wrapper {
+  display: flex;
+  justify-content: space-between; }
+
+.credit-calc__send-request-button {
+  width: 198px;
+  height: 51px;
+  align-self: center;
+  background: #2C36F2;
+  border-radius: 4px;
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  border: none;
+  outline: none;
+  color: #F6F7FF;
+  cursor: pointer; }
+
+.credit-calc__title--request {
+  text-align: center; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .credit-calc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 678px;
+    padding-left: 37px; }
+  .credit-calc__params-section:not(:first-of-type) {
+    margin-bottom: 15px; }
+  .credit-calc__center-wrapper {
+    padding-top: 30px; }
+  .credit-calc__create-request-block {
+    height: auto;
+    width: 678px; }
+  .credit-calc__main-title {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 30px; }
+  .credit-calc__title {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 18px; }
+    .credit-calc__title--our-request {
+      font-size: 22px;
+      line-height: 31px; }
+  .credit-calc__params {
+    width: 100%; }
+  .credit-calc__aim-select {
+    width: 678px; }
+  .credit-calc__credit-amount-info {
+    margin-bottom: 14px; }
+  .credit-calc__aim-select__content {
+    width: 678px; }
+  .credit-calc__aim-select__label {
+    width: 676.5px; }
+  .credit-calc__offer {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 60px;
+    margin-left: 0;
+    margin-top: 72px; }
+  .credit-calc__open-request-block-button {
+    width: 100%; }
+  .credit-calc__request {
+    margin-top: 63px;
+    width: 678px; }
+  .credit-calc__request-info-list {
+    width: 678px;
+    margin-top: 7px; }
+  .credit-calc__request-input {
+    width: 324px; }
+    .credit-calc__request-input--name {
+      width: 100%; }
+  .credit-calc__send-request-button {
+    width: 100%; } }
+
+@media (max-width: 767px) {
+  .credit-calc {
+    width: 290px;
+    padding-left: 7px;
+    margin-bottom: 54px;
+    padding-top: 0; }
+  .credit-calc__center-wrapper {
+    width: 290px;
+    padding-top: 25px; }
+  .credit-calc__params-section:not(:first-of-type) {
+    margin-bottom: 10px; }
+  .credit-calc__create-request-block {
+    height: auto;
+    width: 290px; }
+  .credit-calc__main-title {
+    font-size: 22px;
+    line-height: 31px;
+    margin-bottom: 22px; }
+  .credit-calc__title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 15px; }
+  .credit-calc__params {
+    width: 100%;
+    margin-bottom: 0px; }
+  .credit-calc__aim {
+    width: 290px;
+    margin-bottom: 10px; }
+  .credit-calc__aim-select {
+    width: 100%; }
+  .credit-calc__range-amount {
+    font-size: 14px;
+    line-height: 20px; }
+  .credit-calc__mother-capital {
+    margin-top: 0px; }
+  .credit-calc__mother-capital-input-label {
+    font-size: 14px;
+    line-height: 20px; }
+  .credit-calc__aim-select__title {
+    padding-left: 13px; }
+  .credit-calc__aim-select__content {
+    width: 290px; }
+  .credit-calc__aim-select__label {
+    width: 288.5px; }
+  .credit-calc__offer {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0px;
+    margin-top: 49px;
+    margin-left: 15px; }
+  .credit-calc__offer-info-item-description {
+    margin-top: 0; }
+  .credit-calc__credit-amount-info {
+    margin-bottom: 8px; }
+  .credit-calc__open-request-block-button {
+    width: 100%; }
+  .credit-calc__title--request {
+    text-align: center; }
+  .credit-calc__offer-info {
+    width: 100%;
+    flex-direction: column; }
+  .credit-calc__offer-info-item {
+    margin-bottom: 15px; }
+  .credit-calc__offer-amount-block {
+    font-size: 18px;
+    line-height: 25px; }
+  .credit-calc__request {
+    width: 100%; }
+  .credit-calc__open-request-block-button {
+    width: 260px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 6px; }
+  .credit-calc__request {
+    width: 100%;
+    margin-top: 32px; }
+  .credit-calc__request-wrapper {
+    padding-left: 0; }
+  .credit-calc__request-info-list {
+    margin-top: 5px; }
+  .credit-calc__request-info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px; }
+  .credit-calc__request-inputs-block {
+    margin-top: -2px;
+    margin-bottom: 0; }
+  .credit-calc__request-info-value {
+    order: -1;
+    font-size: 18px;
+    line-height: 25px; }
+  .credit-calc__inputs-wrapper {
+    flex-direction: column; }
+  .credit-calc__name-input-wrapper {
+    margin-bottom: 0px; }
+  .credit-calc__request-input {
+    padding-left: 13px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 22px; }
+    .credit-calc__request-input--tel, .credit-calc__request-input--email {
+      width: 100%; }
+  .credit-calc__send-request-button {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px; } }
+
+.map {
+  margin-top: 134px;
+  width: 100%;
+  padding: 0px;
+  display: flex;
+  justify-content: center; }
+
+.map__center-wrapper,
+.map__wrapper {
+  width: calc(100% - 30px);
+  max-width: 1200px; }
+
+.map__wrapper {
+  margin-top: 54px;
+  margin-left: 23px;
+  background: url("../img/map.png"); }
+
+.map__title {
+  font-family: "Roboto bold", "Arial", sans-serif;
+  font-size: 41px;
+  line-height: 57px;
+  color: #1F1E25;
+  margin-left: 20px; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .map {
+    margin-top: 41px;
+    padding-left: 8px; }
+  .map__wrapper {
+    margin-left: 0;
+    margin-top: 35px; }
+  .map__center-wrapper,
+  .map__wrapper {
+    width: 100%;
+    max-width: 678px; }
+  .map__wrapper {
+    background: url("../img/map-tablet.png"); }
+  .map__title {
+    font-size: 32px;
+    line-height: 45px; } }
+
+@media (max-width: 767px) {
+  .map {
+    margin-top: 0px;
+    padding-left: 0px; }
+  .map__wrapper {
+    margin-left: -15px;
+    margin-top: 27px;
+    width: 100vw;
+    background: url("../img/map-mobile.png"); }
+  .map__title {
+    margin-top: 0;
+    font-size: 22px;
+    line-height: 31px; } }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 107px;
+  padding: 61px 0px 40px 19px;
+  background-color: #F6F7FF; }
+
+.footer__center-wrapper {
+  justify-content: space-between; }
+
+.footer__about-company {
+  margin-top: 2px; }
+
+.footer__logo {
+  margin-bottom: 10px; }
+
+.footer__company-copyright {
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 17px;
+  color: #707C87; }
+
+.footer__nav-items {
+  width: 144px;
+  margin-top: -3px;
+  padding-left: 0px;
+  margin-left: 5px; }
+
+.footer__nav-item {
+  margin-bottom: 9px; }
+
+.footer__link {
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1F1E25; }
+
+.footer__phone {
+  display: flex;
+  justify-content: flex-end;
+  position: relative; }
+  .footer__phone--special {
+    width: 201px; }
+    .footer__phone--special::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url("../img/phone.svg") left no-repeat;
+      margin-right: 18px;
+      margin-top: 2px; }
+  .footer__phone--general {
+    width: 158px; }
+    .footer__phone--general::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url("../img/phone-2.svg") left no-repeat;
+      margin-right: 18px;
+      margin-top: 2px; }
+
+.footer__phone-wrapper {
+  display: flex;
+  flex-direction: column; }
+
+.footer__phone-number {
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1F1E25;
+  margin-bottom: 4px; }
+
+.footer__phone-description {
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 17px;
+  color: #707C87; }
+
+.footer__media-links {
+  width: 102px;
+  margin-top: 2px;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between; }
+
+.footer__media-links-item {
+  color: rgba(0, 0, 0, 0); }
+  .footer__media-links-item--facebook {
+    width: 9px;
+    height: 16px;
+    background: url("../img/fb.svg") center no-repeat; }
+  .footer__media-links-item--instagram {
+    width: 16px;
+    height: 16px;
+    background: url("../img/insta.svg") center no-repeat; }
+  .footer__media-links-item--twitter {
+    width: 16px;
+    height: 13px;
+    background: url("../img/twitter.svg") center no-repeat; }
+  .footer__media-links-item--youtube {
+    width: 16px;
+    height: 16px;
+    background: url("../img/youtube.svg") center no-repeat; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 107px;
+    padding: 29px 0px 40px 0px;
+    background-color: #F6F7FF; }
+  .footer__center-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 239px;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    position: relative; }
+  .footer__nav {
+    position: absolute;
+    padding-left: 4px;
+    top: 50px; }
+  .footer__company-copyright {
+    margin-top: -6px;
+    padding-left: 4px; }
+  .footer__about-company {
+    height: 100%;
+    width: 280px;
+    margin-right: -65px; }
+  .footer__logo {
+    margin-bottom: 174px; }
+  .footer__media-links {
+    width: 117px;
+    margin-left: 3px; }
+  .footer__phone {
+    margin-bottom: 21px; } }
+
+@media (max-width: 767px) {
+  .footer {
+    margin-top: 95px;
+    padding: 0px 0 53px 0; }
+  .footer__center-wrapper {
+    flex-direction: column;
+    height: auto;
+    flex-wrap: nowrap;
+    padding-left: 15px;
+    position: relative; }
+  .footer__link {
+    font-size: 14px;
+    line-height: 20px; }
+  .footer__company-copyright {
+    display: none; }
+  .footer__nav {
+    position: relative;
+    margin-bottom: 4px; }
+  .footer__about-company {
+    margin-bottom: 15px; }
+  .footer__phone {
+    margin-bottom: 12px;
+    margin-left: -5px; }
+  .footer__media-links {
+    width: 117px;
+    margin-top: 4px; } }
+
+.login-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 20;
+  overflow-y: hidden; }
+
+.login-popup__title-block {
+  display: flex;
+  justify-content: space-between; }
+
+.login-popup__login-form {
+  width: 544px;
+  box-sizing: border-box;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  background: #F6F7FF;
+  border: 4px solid #2C36F2; }
+
+.login-popup__form {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+
+.login-popup__label {
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 7px;
+  color: #394959; }
+
+.login-popup__input {
+  border: 1px solid #1F1E25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 60px;
+  padding: 10px 25px;
+  background: inherit;
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #394959;
+  margin-bottom: 10px;
+  position: relative; }
+  .login-popup__input:not(:first-child) {
+    margin-bottom: 30px; }
+  .login-popup__input--password {
+    width: 100%;
+    padding-right: 60px; }
+
+.login-popup__input-wrapper {
+  position: relative; }
+
+.login-popup__password-change {
+  display: block;
+  width: 22px;
+  height: 12px;
+  content: "";
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: url("../img/password-eye.svg") center no-repeat;
+  outline: none;
+  border: none;
+  cursor: pointer; }
+
+.login-popup__forget-password {
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 17px;
+  text-align: end;
+  color: #707C87;
+  margin-bottom: 30px; }
+
+.login-popup__cross {
+  cursor: pointer; }
+
+.login-popup__submit {
+  background: #2C36F2;
+  height: 60px;
+  border-radius: 4px;
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 23px 0;
+  text-align: center;
+  color: #F6F7FF;
+  outline: none;
+  border: none; }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .login-popup__login-form {
+    width: 678px;
+    padding: 60px 88px; } }
+
+@media (max-width: 767px) {
+  .login-popup__login-form {
+    width: 290px;
+    padding: 50px 20px 75px 20px; }
+  .login-popup__form {
+    margin-top: 35px; }
+  .login-popup__input {
+    margin-bottom: 30px; }
+    .login-popup__input:not(:first-child) {
+      margin-bottom: 25px; }
+  .login-popup__forget-password {
+    position: absolute;
+    bottom: -60px;
+    left: 74px; }
+  .login-popup__submit {
+    height: 51px;
+    padding: 18px 0;
+    font-size: 14px;
+    line-height: 16px; } }
+
+.success-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 20; }
+
+.success-popup__wrapper {
+  background: #fff;
+  width: 500px;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; }
+
+.success-popup__close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 16px;
+  height: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: url("../img/menu-cross.svg") center no-repeat; }
+
+.success-popup__title {
+  text-align: center;
+  font-family: "Roboto medium", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 31px;
+  color: #1F1E25; }
+
+.success-popup__description {
+  width: 293px;
+  text-align: center;
+  font-family: "Roboto regular", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #394959; }

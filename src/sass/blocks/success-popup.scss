@@ -1,0 +1,54 @@
+.success-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 20;
+}
+
+.success-popup__wrapper {
+    background: #fff;
+    width: 500px;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.success-popup__close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 16px;
+    height: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: url("../img/menu-cross.svg") center no-repeat;
+}
+
+.success-popup__title {
+    text-align: center;
+    font-family: $med;
+    font-size: 22px;
+    line-height: 31px;
+
+    color: #1F1E25;
+}
+
+
+.success-popup__description {
+    width: 293px;
+    text-align: center;
+    font-family: $default;
+    font-size: 16px;
+    line-height: 22px;
+    
+    color: #394959;
+}

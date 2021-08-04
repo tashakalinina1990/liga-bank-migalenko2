@@ -1,0 +1,361 @@
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 44px;
+    padding-bottom: 20px;
+}
+
+.tabs__tab {
+    overflow: hidden;
+    padding-left: 58px;
+    padding-top: 37px;
+    padding-bottom: 40px;
+
+    &--deposite {
+        background: url("../img/piggybank.jpg") top 53px right 135px no-repeat;
+
+        & .tabs__title {
+            width: 371px;
+        }
+
+        & span{
+            width: 371px;
+        }
+    }
+
+    &--credits {
+        background: url("../img/credit.jpg") top 53px right 135px no-repeat;
+
+        & .tabs__title {
+            width: 286px;
+        }
+    }
+
+    &--insurance {
+        background: url("../img/safety.jpg") top 53px right 135px no-repeat;
+
+        & .tabs__title {
+            width: 337px;
+        }
+    }
+
+    &--online-services {
+        background: url("../img/online-services.jpg") top 53px right 135px no-repeat;
+
+        & .tabs__title {
+            width: 406px;
+        }
+
+        & span{
+            width: 355px;
+        }
+    }
+}
+
+.tabs__center-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.tabs__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 0;
+}
+
+.tabs__list-item {
+    width: 263px;
+    height: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &--active img {
+        opacity: 1;
+    }
+}
+
+.tabs__list-item-img {
+    opacity: 0.75;
+}
+
+.tabs__list-item-name {
+    font-family: $med;
+    font-size: 18px;
+    line-height: 21px;
+    color: #4C4B51;
+    margin-left: 10px;
+}
+
+@media (max-width: 1023px) {
+    .tabs__list {
+        display: none;
+    }
+}
+
+.tabs__title {
+    font-family: $med;
+    font-size: 22px;
+    line-height: 31px;
+    color: #1F1E25;
+    margin-top: 0;
+}
+
+.tabs__info-list {
+    margin-top: 30px;
+    margin-bottom: 35px;
+    padding-left: 0;
+}
+
+.tabs__info-list-item {
+    font-family: $default;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+    color: #1F1E25;
+    margin-bottom: 15px;
+
+    &::before {
+        content: "";
+        width: 21px;
+        height: 20px;
+        background: url("../img/tick.svg") left no-repeat;
+        margin-bottom: auto;
+    }
+}
+
+.tabs__learn-more {
+    box-sizing: border-box;
+    width: 198px;
+    height: 51px;
+    background: #2C36F2;
+    border-radius: 4px;
+    padding: 20px auto;
+    text-align: center;
+    font-family: $med;
+    font-size: 16px;
+    line-height: 19px;
+    color: #F6F7FF;
+    outline: none;
+    border: none;
+}
+
+.tabs__info {
+    font-family: $default;
+    font-size: 18px;
+    line-height: 25px;
+    color: #1F1E25;
+}
+
+.tabs__learn-more-link {
+    color: #1F1E25;
+    font-weight: bold;
+    border-bottom: 1px solid #1F1E25;
+}
+
+.tabs .slick-dots {
+    bottom: -30px !important;
+}
+
+.tabs .slick-dots li {
+    background: #2028B6;
+}
+
+.tabs .slick-dots .slick-active {
+    background: #E0E0E0;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .tabs__title {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .tabs__info-list-item {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .tabs__info-list {
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+    
+    .tabs__tab {
+        padding-left: 25px;
+        padding-top: 9px;
+
+        &--deposite {
+            background: url("../img/piggybank-tablet.jpg") bottom 0px right 30px no-repeat;
+
+            & .tabs__title {
+                width: 304px;
+            }
+
+            & span{
+                width: 330px;
+            }
+        }
+
+        &--credits {
+            background: url("../img/credits-tablet.jpg") bottom 0px right 0px no-repeat;
+
+            & .tabs__title {
+                width: 234px;
+            }
+        }
+
+        &--insurance {
+            background: url("../img/safety-tablet.jpg") bottom 0px right 0px no-repeat;
+
+            & .tabs__title {
+                width: 276px;
+            }
+        }
+
+        &--online-services {
+            background: url("../img/phone-icon-tablet.jpg") bottom 0px right 0px no-repeat;
+
+            & .tabs__title {
+                width: 333px;
+            }
+
+            & span{
+                width: 296px;
+            }
+        }
+    }
+
+    .tabs__info {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .tabs .slick-dots {
+        margin-left: -10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tabs .slick-dots {
+        bottom: -50px !important;
+    }
+
+    .tabs__title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .tabs__info-list-item {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .tabs__info-list {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .tabs__center-wrapper {
+        padding-left: 15px;
+    }
+    
+    .tabs__tab {
+
+        padding-left: 0;
+        padding-top: 10px;
+        
+        min-width: 300px;
+
+        &--deposite {
+            background: url("../img/piggybank-mobile.jpg") top 38px right 0px no-repeat;
+        
+            & .tabs__title {
+                width: 270px;
+            }
+
+            & span{
+                width: 212px;
+            }
+        }
+
+        &--credits {
+            background: url("../img/credits-mobile.jpg") top 38px right 0px no-repeat;
+           
+            & .tabs__title {
+                width: 208px;
+            }
+        }
+
+        &--insurance {
+            background: url("../img/safety-mobile.jpg") top 38px right 0px no-repeat;
+            
+            & .tabs__title {
+                width: 246px;
+            }
+        }
+
+        &--online-services {
+            background: url("../img/phone-icon-mobile.jpg") top 38px right 0px no-repeat;
+        
+            & .tabs__title {
+                width: 223px;
+            }
+
+            & span{
+                width: 194px;
+            }
+        }
+    }
+
+    .tabs__info-list {
+        margin-top: 22px;
+    }
+
+    .tabs__info-list-item {
+        margin-bottom: 12px;
+
+        &::before {
+            margin-top: 4px;
+            margin-right: 5px;
+            content: "";
+            width: 10px;
+            height: 8px;
+            background: url("../img/tick-mobile.svg") center no-repeat;
+        }
+    }
+
+    .tabs__info {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .tabs__learn-more {
+        margin-top: -2px;
+        width: 290px;
+        height: 43px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    
+    .tabs .slick-dots {
+        height: 6px;
+        bottom: -35px !important;
+        display: flex;
+        left: -10px;
+
+        & li {
+            width: 6px !important;
+            height: 6px !important;
+            background: #2028B6;
+            border-radius: 50%;
+            margin-right: 6px;
+           
+        }
+    }
+}

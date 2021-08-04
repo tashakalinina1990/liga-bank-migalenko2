@@ -1,0 +1,232 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 107px;
+    padding: 61px 0px 40px 19px;
+    background-color: #F6F7FF;
+}
+
+.footer__center-wrapper {
+    justify-content: space-between;
+}
+
+.footer__about-company {
+    margin-top: 2px;
+}
+
+.footer__logo {
+    margin-bottom: 10px;
+}
+
+.footer__company-copyright {
+    font-family: $default;
+    font-size: 12px;
+    line-height: 17px;
+    color: #707C87;
+}
+
+.footer__nav-items {
+    width: 144px;
+    margin-top: -3px;
+    padding-left: 0px;
+    margin-left: 5px;
+}
+
+.footer__nav-item {
+    margin-bottom: 9px;
+}
+
+.footer__link {
+    font-family: $med;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1F1E25;
+}
+
+.footer__phone {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    &--special {
+        width: 201px;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url("../img/phone.svg") left no-repeat;
+            margin-right: 18px;
+            margin-top: 2px;
+        }
+    }
+
+    &--general{
+        width: 158px;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url("../img/phone-2.svg") left no-repeat;
+            margin-right: 18px;
+            margin-top: 2px;
+        }
+    }
+}
+
+.footer__phone-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__phone-number {
+    font-family: $med;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: $black;
+    margin-bottom: 4px;
+}
+
+.footer__phone-description {
+    font-family: $default;
+    font-size: 12px;
+    line-height: 17px;
+    color: #707C87;
+}
+
+.footer__media-links {
+    width: 102px;
+    margin-top: 2px;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__media-links-item {
+
+    color: rgba(0, 0, 0, 0);
+
+
+    &--facebook {
+        width: 9px;
+        height: 16px;
+        background: url("../img/fb.svg") center no-repeat;
+    }
+
+    &--instagram {
+        width: 16px;
+        height: 16px;
+        background: url("../img/insta.svg") center no-repeat;
+    }
+
+    &--twitter {
+        width: 16px;
+        height: 13px;
+        background: url("../img/twitter.svg") center no-repeat;
+    }
+
+    &--youtube {
+        width: 16px;
+        height: 16px;
+        background: url("../img/youtube.svg") center no-repeat;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 107px;
+        padding: 29px 0px 40px 0px;
+        background-color: #F6F7FF;
+    }
+
+    .footer__center-wrapper {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 239px;
+        flex-wrap: wrap;
+        padding-left: 40px;
+        position: relative;
+    }
+
+    .footer__nav {
+        position: absolute;
+        padding-left: 4px;
+        top: 50px;
+    }
+
+    .footer__company-copyright {
+        margin-top: -6px;
+        padding-left: 4px;
+    }
+
+    .footer__about-company {
+        height: 100%;
+        width: 280px;
+        margin-right: -65px;
+    }
+
+    .footer__logo {
+        margin-bottom: 174px;
+    }
+
+    .footer__media-links {
+        width: 117px;
+        margin-left: 3px;
+    }
+
+    .footer__phone {
+        margin-bottom: 21px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .footer {
+        margin-top: 95px;
+        padding: 0px 0 53px 0;
+    }
+
+    .footer__center-wrapper {
+        flex-direction: column;
+        height: auto;
+        flex-wrap: nowrap;
+        padding-left: 15px;
+        position: relative;
+    }
+
+    .footer__link {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .footer__company-copyright {
+        display: none;
+    }
+
+    .footer__nav {
+        position: relative;
+        margin-bottom: 4px;
+    }
+
+    .footer__about-company {
+        margin-bottom: 15px;
+    }
+
+    .footer__phone {
+        margin-bottom: 12px;
+        margin-left: -5px;
+    }
+
+    .footer__media-links {
+        width: 117px;
+        margin-top: 4px;
+    }
+}
